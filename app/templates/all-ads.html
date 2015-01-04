@@ -1,0 +1,59 @@
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-9">
+            <ul id="ul">
+                <li ng-repeat="ad in data.ads">
+                    <div class="container well">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <h4 class="pull-left">
+                                    <strong>
+                                    {{ad.title}}
+                                    </strong>
+                                </h4>
+                            </div>
+                            <div class="col-md-5">
+                                <span class="pull-right">
+                                    {{ad.date | date: 'd-MMM-yyyy'}}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="" ng-src="{{ad.imageDataUrl}}" class="imageDataUrl">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="well well-sm">
+                                    {{ad.text}}
+                                </div>
+                                <div class="well well-sm"><strong>Name: </strong>{{ad.ownerName}}</div>
+                                <div class="well well-sm"><strong>Email: </strong>{{ad.ownerEmail}}</div>
+                                <div class="well well-sm"><strong>Phone: </strong>{{ad.ownerPhone}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-md-3">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Categories</h3>
+                </div>
+                <div class="panel-body" ng-repeat="category in categories">
+                    {{category.name}}
+                </div>
+            </div>
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Towns</h3>
+                </div>
+                <div class="panel-body" ng-repeat="town in towns">
+                    {{town.name}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
