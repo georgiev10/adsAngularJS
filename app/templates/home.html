@@ -4,15 +4,15 @@
         <div class="pull-right">Date:{{ad.date | date:'dd-MMM-yyyy'}}</div><br><br>
         <div class="row">
             <div ng-if='ad.imageDataUrl' class="col-md-3">
-                <div class="center">
+                <div class="img-center">
                     <img class="ad-image" ng-src="{{ad.imageDataUrl}}" />
                 </div>
             </div>
             <div class="col-md-9">
-                <div>Text: {{ad.text}}</div><br>
-                <div>Name: {{ad.ownerName}}</div>
-                <div>Email: {{ad.ownerEmail}}</div>
-                <div>Phone: {{ad.ownerPhone}}</div>
+                <div class="text-field">Text: {{ad.text}}</div>
+                <div class="text-field">Name: {{ad.ownerName}}<br>
+                Email: {{ad.ownerEmail}}><br>
+                Phone: {{ad.ownerPhone}}</div>
             </div>
         </div>
     </li>
