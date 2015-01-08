@@ -9,10 +9,10 @@
 </div>
 
 <!-- Login / register box for anonymous site visitors -->
-<div class="box" ng-if="authService.isAnonymous()">
+<div class="box" ng-if="authService.isAnonymous()" ng-init="link=0">
     <p>To publish a new ad, please login.</p>
-    <a href="#/login" class="button">Login</a>
-    <a href="#/register" class="button">Register</a>
+    <a href="#/login" class="button" ng-click="link=1">Login</a>
+    <a href="#/register" class="button" ng-click="link=2">Register</a>
 </div>
 
 <!-- Navigation box for logged in normal users (not admins) -->
