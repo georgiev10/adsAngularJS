@@ -90,7 +90,8 @@ ul.sidebar-menu li {
 }
 
 ul.sidebar-menu li:hover {
-    background: #9ec684; ;
+    background: #374C6E;
+    border-radius: 3px;
 }
 
 ul.sidebar-menu li.special {
@@ -98,8 +99,8 @@ ul.sidebar-menu li.special {
 }
 
 ul.sidebar-menu li.selected {
-    background: #DAA600;
-    border: 1px solid #7F6000;
+    background: #374C6E;
+    border-radius: 3px;
 }
 
 ul.sidebar-menu li a, ul.sidebar-menu li a:focus {
@@ -182,6 +183,8 @@ ul.sidebar-menu li a, ul.sidebar-menu li a:focus {
     text-align: center;
     padding-top: 15px;
     padding-bottom: 15px;
+    min-height: 150px;
+    margin-bottom: 15px;
 }
 
 .text-field {

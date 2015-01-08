@@ -19,6 +19,20 @@ app.controller('HomeController',
             );
         };
 
+        // This event is sent by RightSideBarController when the current category is changed
+        $scope.$on("categorySelectionChanged", function(event, selectedCategoryId) {
+                $scope.adsParams.categoryId = selectedCategoryId;
+                $scope.adsParams.startPage = 1;
+                $scope.reloadAds();
+        });
+
+
+        $scope.$on("townSelectionChanged", function(event, selectedTownId) {
+            $scope.adsParams.townId = selectedTownId;
+            $scope.adsParams.startPage = 1;
+            $scope.reloadAds();
+        });
+
         $scope.reloadAds();
     }
 );

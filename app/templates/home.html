@@ -3,7 +3,7 @@
         <h1 class="pull-left">{{ad.title}}</h1>
         <div class="pull-right">Date:{{ad.date | date:'dd-MMM-yyyy'}}</div><br><br>
         <div class="row">
-            <div ng-if='ad.imageDataUrl' class="col-md-3">
+            <div class="col-md-3" style="width: 190px">
                 <div class="img-center">
                     <img class="ad-image" ng-src="{{ad.imageDataUrl}}" />
                 </div>
