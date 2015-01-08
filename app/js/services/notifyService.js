@@ -7,7 +7,7 @@ app.factory('notifyService',
                 noty({
                     text: msg,
                     type: 'info',
-                    layout: 'topCenter',
+                    layout: 'bottomCenter',
                     timeout: 1000}
                 );
             },
@@ -34,7 +34,7 @@ app.factory('notifyService',
                 noty({
                     text: msg,
                     type: 'error',
-                    layout: 'topCenter',
+                    layout: 'bottomCenter',
                     timeout: 5000}
                 );
             }
