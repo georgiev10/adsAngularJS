@@ -113,9 +113,8 @@ ul.sidebar-menu li a, ul.sidebar-menu li a:focus {
     color: #ffffff;
     font-size: 14px;
     font-weight: bold;
-    text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 1px;
-    background: #70AD47;
-    border: 2px solid #507E32;
+    background: #374C6E;
+    border: 2px solid #2B3B4B;
     border-radius: 5px;
     text-decoration: none;
     padding: 5px 20px;
@@ -125,11 +124,10 @@ ul.sidebar-menu li a, ul.sidebar-menu li a:focus {
 }
 
 .button:hover {
-    background: #87c649;
-    border: 2px solid #649636;
+    background: #374C6E;
+    border: 2px solid #2B3B4B;
     text-decoration: none;
     color: #ffffff;
-    text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 1px;
     cursor: pointer;
 }
 
@@ -154,7 +152,6 @@ ul.sidebar-menu li a, ul.sidebar-menu li a:focus {
     width: 150px;
     height: 150px;
     display: inline-block;
-    border: 1px solid rgba(100, 155, 63, 0.51);
     text-align: center;
 }
 
