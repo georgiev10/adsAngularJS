@@ -52,7 +52,9 @@ app.factory('authService',
             },
 
             isAdmin : function() {
-                // TODO: implement this (similar to isNormalUser())
+                var isAdmin = this.getCurrentUser().isAdmin;
+                return isAdmin;
+                //TODO have to check
             },
 
             getAuthHeaders : function() {
@@ -61,6 +63,7 @@ app.factory('authService',
                 if (currentUser) {
                     headers['Authorization'] = 'Bearer ' + currentUser.access_token;
                 }
+                alert("Auth: " + headers['Authorization']);
                 return headers;
             }
         }

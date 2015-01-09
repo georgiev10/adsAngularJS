@@ -1,26 +1,31 @@
 'use strict';
 
 app.controller('UserGetAdsController',
-    function ($scope, $rootScope, $location, townsService, categoriesService,
-              userService, notifyService, pageSize) {
+    function ($scope, $rootScope, $location,userService, notifyService, pageSize) {
         $rootScope.pageTitle = "My Ads";
+        alert('My ads was clicked!')
 
-        $scope.params = {
-            'startPage' : 1,
-            'pageSize' : pageSize
-        };
+//        $scope.params = {
+//            'startPage' : 1,
+//            'pageSize' : pageSize
+//        };
+
+        alert('My ads was clicked-2! ');
 
         $scope.reloadUserAds = function() {
             userService.getUserAds(
-                $scope.params,
+                [],
                 function success(data) {
-                    alert('success');
+                    console.log(data);
                     $scope.ads=data;
+                    $location.path("/user/ads");
                 },
                 function error(err) {
                     notifyService.showError("Cannot load ads", err);
                 }
             );
+
+            alert('My ads was clicked-2a! ');
         };
 
 
