@@ -14,10 +14,12 @@
                 </div>
             </div>
             <div class="col-md-9">
-                <div class="text-field">Text: {{ad.text}}</div>
-                <div class="text-field">Name: {{ad.ownerName}}<br>
-                Email: {{ad.ownerEmail}}><br>
-                Phone: {{ad.ownerPhone}}</div>
+                <div class="text-field">{{ad.text}}</div>
+                <div class="text-field">Category: {{ad.categoryName}}<br>
+                    Town: {{ad.townName}}
+                </div>
+                <p class="status">Status: {{ad.status}}</p>
+                <a ng-click="" class="button">Deactivate</a>
             </div>
         </div>
     </li>
@@ -27,7 +29,9 @@
     No ads found.
 </div>
 
-<pagination total-items="ads.numItems" ng-model="adsParams.startPage"
-            items-per-page="adsParams.pageSize" ng-change="reloadAds()"
-            max-size="9" boundary-links="true">
-</pagination>
+<div ng-class="{'ng-hide' : ads.ads.length==0}">
+    <pagination total-items="ads.numItems" ng-model="adsParams.startPage"
+        items-per-page="adsParams.pageSize" ng-change="reloadAds()"
+        max-size="9" boundary-links="true">
+    </pagination>
+</div>

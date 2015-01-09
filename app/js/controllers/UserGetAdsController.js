@@ -2,6 +2,8 @@
 
 app.controller('UserGetAdsController',
     function ($scope, $location, $rootScope, userService, authService, notifyService, pageSize) {
+        $rootScope.pageTitle = "My Ads";
+
         $scope.personalParams = {
             startPage: 1,
             pageSize: pageSize

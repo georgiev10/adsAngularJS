@@ -236,3 +236,17 @@ textarea {
 #image {
     width: 240px;
 }
+
+.status {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    background: #374C6E;
+    border: 1px solid #374C57;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: inline-block;
+    margin: 0px;
+    outline: none;
+}
