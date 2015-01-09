@@ -23,7 +23,7 @@ app.config(function ($routeProvider) {
     });
 
     $routeProvider.when('/user/ads', {
-        templateUrl: 'templates/user/get-user-ads.html',
+        templateUrl: 'templates/user/get-ads.html',
         controller: 'UserGetAdsController'
     });
 
