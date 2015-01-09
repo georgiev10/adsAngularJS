@@ -1,0 +1,34 @@
+<ul class="ads">
+    <li ng-repeat="ad in ads.ads" class="box">
+        <h1 class="pull-left">{{ad.title}}</h1>
+        <div class="pull-right">Date:{{ad.date | date:'dd-MMM-yyyy'}}</div><br><br>
+        <div class="row">
+            <div ng-if='ad.imageDataUrl' class="col-md-3">
+                <div class="img-center">
+                    <img class="ad-image" ng-src="{{ad.imageDataUrl}}" />
+                </div>
+            </div>
+            <div ng-if='!ad.imageDataUrl' class="col-md-3">
+                <div class="img-center">
+                    <span>no image</span>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="text-field">Text: {{ad.text}}</div>
+                <div class="text-field">Name: {{ad.ownerName}}<br>
+                Email: {{ad.ownerEmail}}><br>
+                Phone: {{ad.ownerPhone}}</div>
+            </div>
+        </div>
+    </li>
+</ul>
+
+<div ng-if="ads.ads.length==0" class="box no-data">
+    No ads found.
+</div>
+
+<pagination total-items="ads.numItems" ng-model="adsParams.startPage"
+            items-per-page="adsParams.pageSize" ng-change="reloadAds()"
+            max-size="9" boundary-links="true">
+</pagination>
+
