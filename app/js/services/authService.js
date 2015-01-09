@@ -52,8 +52,8 @@ app.factory('authService',
             },
 
             isAdmin : function() {
-                var isAdmin = this.getCurrentUser().isAdmin;
-                return isAdmin;
+//                var isAdmin = this.getCurrentUser().isAdmin;
+//                return isAdmin;
                 //TODO have to check
             },
 

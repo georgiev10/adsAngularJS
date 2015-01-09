@@ -5,7 +5,6 @@ app.factory('userService',
         return {
 
             getUserAds: function (params, success, error) {
-
                 var request = {
                     method: 'GET',
                     url: baseServiceUrl + '/api/user/ads',
@@ -13,14 +12,9 @@ app.factory('userService',
                     params: params
                 };
                 $http(request).success(success).error(error);
-
-                alert('My ads was clicked-3! ');
             },
 
-
-
             createNewAd: function (adData, success, error) {
-
                 var request = {
                     method: 'POST',
                     url: baseServiceUrl + '/api/user/ads',
@@ -28,7 +22,6 @@ app.factory('userService',
                     data: adData
                 };
                 $http(request).success(success).error(error);
-                alert('CreateNewAd was clicked-1!');
             },
 
 
