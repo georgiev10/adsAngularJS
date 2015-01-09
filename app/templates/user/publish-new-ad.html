@@ -1,17 +1,28 @@
+<script>alert('pageTitle')</script>
 <div class="box">
     <h2>Publish New Ad</h2>
     <p>
-        <label for="title">Title:</label>
+        <label for="title">Title</label>
         <input type="text" id="title" ng-model="adData.title" required />
     </p>
-
-    <!-- TODO: add “text” field -->
+    <p>
+        <label for="text">Text</label>
+        <textarea  type="text" id="text" ng-model="adData.text" required></textarea>
+    </p>
 
     <p>
-        <label for="category">Category:</label>
+        <label for="category">Category</label>
         <select id="category" ng-model="adData.categoryId">
             <option value="null">(None)</option>
             <option ng-repeat="c in categories" value="{{c.id}}">{{c.name}}</option>
+        </select>
+    </p>
+
+    <p>
+        <label for="town">Town</label>
+        <select id="town" ng-model="adData.townId">
+            <option value="null">(None)</option>
+            <option ng-repeat="town in towns" value="{{town.id}}">{{town.name}}</option>
         </select>
     </p>
 

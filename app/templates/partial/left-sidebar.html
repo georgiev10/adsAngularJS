@@ -1,29 +1,29 @@
 <!-- Navigation box for anonymous site visitors -->
 <div ng-if="authService.isAnonymous()" class="box">
     <h2>Navigation</h2>
-    <ul class="sidebar-menu" ng-init="link=0">
-        <li ng-click="link=0" ng-class="{ 'selected' : link==0 }"><a href="#/">Home</a></li>
-        <li ng-click="link=1" ng-class="{ 'selected' : link==1 }"><a href="#/login">Login</a></li>
-        <li ng-click="link=2" ng-class="{ 'selected' : link==2 }"><a href="#/register">Register</a></li>
+    <ul class="sidebar-menu">
+        <li ng-class="{'selected' : pageTitle == 'Home'}"><a href="#/">Home</a></li>
+        <li ng-class="{'selected' : pageTitle == 'Login'}"><a href="#/login">Login</a></li>
+        <li ng-class="{'selected' : pageTitle == 'Register'}"><a href="#/register">Register</a></li>
     </ul>
 </div>
 
 <!-- Login / register box for anonymous site visitors -->
 <div class="box" ng-if="authService.isAnonymous()" ng-init="link=0">
     <p>To publish a new ad, please login.</p>
-    <a href="#/login" class="button" ng-click="link=1">Login</a>
-    <a href="#/register" class="button" ng-click="link=2">Register</a>
+    <a href="#/login" class="button">Login</a>
+    <a href="#/register" class="button">Register</a>
 </div>
 
 <!-- Navigation box for logged in normal users (not admins) -->
 <div ng-if="authService.isNormalUser()" class="box">
     <h2>Navigation</h2>
     <ul class="sidebar-menu" ng-init="link=0">
-        <li ng-click="link=0" ng-class="{ 'selected' : link==0 }"><a href="#/">Home</a></li>
-        <li ng-click="link=1" ng-class="{ 'selected' : link==1 }"><a href="#/user/ads">My Ads</a></li>
-        <li ng-click="link=2" ng-class="{ 'selected' : link==2 }"><a href="#/user/ads/publish">Publish New Ad</a></li>
-        <li ng-click="link=3" ng-class="{ 'selected' : link==3 }"><a href="#/user/profile">Edit Profile</a></li>
-        <li ng-click="link=4" ng-class="{ 'selected' : link==4 }"><a ng-click="logout()">Logout</a></li>
+        <li ng-class="{'selected' : pageTitle == 'Home'}"><a href="#/">Home</a></li>
+        <li ng-class="{'selected' : pageTitle == 'My Ads'}"><a href="#/user/ads">My Ads</a></li>
+        <li ng-class="{'selected' : pageTitle == 'Publish New Ad'}"><a href="#/user/ads/publish">Publish New Ad</a></li>
+        <li ng-class="{'selected' : pageTitle == 'Edit Profile'}"><a href="#/user/profile">Edit Profile</a></li>
+        <li><a ng-click="logout()">Logout</a></li>
     </ul>
 </div>
 
