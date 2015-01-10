@@ -4,6 +4,26 @@ app.factory('userService',
     function ($http, baseServiceUrl, authService) {
         return {
 
+            changePassword: function (params, success, error) {
+                var request = {
+                    method: 'PUT',
+                    url: baseServiceUrl + '/api/user/ChangePassword',
+                    headers: authService.getAuthHeaders(),
+                    data: params
+                };
+                $http(request).success(success).error(error);
+            },
+
+            editProfile: function (params, success, error) {
+                var request = {
+                    method: 'PUT',
+                    url: baseServiceUrl + '/api/user/profile',
+                    headers: authService.getAuthHeaders(),
+                    data: params
+                };
+                $http(request).success(success).error(error);
+            },
+
             getUserData: function (params, success, error) {
                 var request = {
                     method: 'GET',
