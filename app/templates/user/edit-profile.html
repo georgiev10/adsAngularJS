@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="col-md-6">
+        <div class="box">
+            <h2>Edit Profile</h2>
+            <label for="ownerName">Name</label><br>
+            <input type="text" id="ownerName" ng-model="userData.name" required /><br>
+
+            <label for="ownerEmail">Email</label><br>
+            <input type="text" id="ownerEmail" ng-model="userData.email" required /><br>
+
+
+            <label for="ownerPhone">Phone</label><br>
+            <input type="text" id="ownerPhone" ng-model="userData.phone" required /><br>
+
+            <label for="town">Town</label><br>
+            <select id="town" ng-model="userData.townId">
+                <option value="null">(None)</option>
+                <option ng-repeat="town in towns"
+                        value="{{town.id}}">{{town.name}}</option>
+            </select><br>
+
+            <p>
+                <a ng-click="" class="button">Update</a>
+                <a href="#/user/ads" class="button">Cancel</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="box">
+            <h2>Change Password</h2>
+            <label for="oldPassword">Old Password</label><br>
+            <input type="password" id="oldPassword" ng-model="userData.oldPassword" required /><br>
+
+            <label for="password">Password</label><br>
+            <input type="password" id="password" ng-model="userData.password" required /><br>
+
+            <label for="confirmPassword">Confirm password</label><br>
+            <input type="password" id="confirmPassword" ng-model="userData.confirmPassword" required />
+
+            <p>
+                <a ng-click="" class="button">Chane Password</a>
+                <a href="#/user/ads" class="button">Cancel</a>
+            </p>
+        </div>
+    </div>
+
+</div>

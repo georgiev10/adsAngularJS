@@ -32,6 +32,11 @@ app.config(function ($routeProvider) {
         controller: 'UserPublishNewAdController'
     });
 
+    $routeProvider.when('/user/profile', {
+        templateUrl: 'templates/user/edit-profile.html',
+        controller: 'UserProfileController'
+    });
+
     $routeProvider.otherwise(
         { redirectTo: '/' }
     );
