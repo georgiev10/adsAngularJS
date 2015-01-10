@@ -9,7 +9,7 @@
 </div>
 
 <!-- Login / register box for anonymous site visitors -->
-<div class="box" ng-if="authService.isAnonymous()" ng-init="link=0">
+<div class="box" ng-if="authService.isAnonymous()">
     <p>To publish a new ad, please login.</p>
     <a href="#/login" class="button">Login</a>
     <a href="#/register" class="button">Register</a>
@@ -18,12 +18,23 @@
 <!-- Navigation box for logged in normal users (not admins) -->
 <div ng-if="authService.isNormalUser()" class="box">
     <h2>Navigation</h2>
-    <ul class="sidebar-menu" ng-init="link=0">
+    <ul class="sidebar-menu">
         <li ng-class="{'selected' : pageTitle == 'Home'}"><a href="#/">Home</a></li>
         <li ng-class="{'selected' : pageTitle == 'My Ads'}"><a href="#/user/ads">My Ads</a></li>
         <li ng-class="{'selected' : pageTitle == 'Publish New Ad'}"><a href="#/user/ads/publish">Publish New Ad</a></li>
         <li ng-class="{'selected' : pageTitle == 'Edit Profile'}"><a href="#/user/profile">Edit Profile</a></li>
         <li><a ng-click="logout()">Logout</a></li>
+    </ul>
+</div>
+
+<div class="box" ng-if="pageTitle == 'My Ads'">
+    <h2>Ads</h2>
+    <ul class="sidebar-menu">
+        <li class="special"><a href="#">All</a></li>
+        <li><a href="#">Published</a></li>
+        <li><a href="#">Waiting Approval</a></li>
+        <li><a href="#">Inactive</a></li>
+        <li><a href="#">Rejected</a></li>
     </ul>
 </div>
 
