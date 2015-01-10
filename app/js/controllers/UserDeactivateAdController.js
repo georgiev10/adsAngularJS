@@ -1,15 +1,9 @@
 'use strict'
 
-app.controller('UserGetAdsController',
+app.controller('UserDeactivateAdController',
     function ($scope, $location, $rootScope, userService, authService, notifyService, pageSize) {
-        $rootScope.pageTitle = "My Ads";
 
-        $scope.personalParams = {
-            startPage: 1,
-            pageSize: pageSize
-        };
-
-        $scope.loadUserAds = function () {
+       $scope.loadUserAds = function () {
             userService.getUserAds(
                 $scope.personalParams,
                 function success (data) {

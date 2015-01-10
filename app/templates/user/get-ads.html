@@ -18,8 +18,22 @@
                 <div class="text-field">Category: {{ad.categoryName}}<br>
                     Town: {{ad.townName}}
                 </div>
+
                 <p class="status">Status: {{ad.status}}</p>
-                <a ng-click="" class="button">Deactivate</a>
+                <div class="edButton">
+                    <div ng-if="ad.status == 'Inactive'">
+                        <a href="#/user/ads/{{ad.id}}" ng-click="editButtonClicked(ad.id)" class="button">Edit</a>
+                        <a href="#/user/ads/publishAgain/{{ad.id}}" ng-click="activateAgainButtonClicked(ad)"
+                           class="button">Publish Again</a>
+                        <a href="#/user/ads/delete/{{ad.id}}" ng-click="deleteAdButtonClicked(ad.id)"
+                           class="button">Delete</a>
+                    </div>
+                    <div ng-if="ad.status == 'WaitingApproval' || ad.status == 'Published'">
+                        <a href="#/user/ads/deactivate/{{ad.id}}" ng-click="deactivateButtonClicked(ad)"
+                           class="button">Deactivate</a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </li>

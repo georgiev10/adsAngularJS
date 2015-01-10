@@ -248,7 +248,13 @@ textarea {
     padding: 5px 10px;
     display: inline-block;
     margin: 0px;
+    margin-right: 10px;
     outline: none;
 }
 
+.edButton {
+    padding: 0px;
+    margin: 0px;
+    display: inline-block;
+}
 
