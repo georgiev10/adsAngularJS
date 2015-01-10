@@ -3,25 +3,25 @@
         <div class="box">
             <h2>Edit Profile</h2>
             <label for="ownerName">Name</label><br>
-            <input type="text" id="ownerName" ng-model="userData.name" required /><br>
+            <input type="text" id="ownerName" ng-value="userData.name" ng-model="userData.name" required /><br>
 
             <label for="ownerEmail">Email</label><br>
-            <input type="text" id="ownerEmail" ng-model="userData.email" required /><br>
+            <input type="text" id="ownerEmail" ng-value="userData.email" ng-model="userData.email" required /><br>
 
 
             <label for="ownerPhone">Phone</label><br>
-            <input type="text" id="ownerPhone" ng-model="userData.phone" required /><br>
+            <input type="text" id="ownerPhone" ng-value="userData.phoneNumber" ng-model="userData.phoneNumber" required /><br>
 
             <label for="town">Town</label><br>
-            <select id="town" ng-model="userData.townId">
+            <select id="town" ng-model="userData.townId" ng-selected="userData.townId">
                 <option value="null">(None)</option>
                 <option ng-repeat="town in towns"
                         value="{{town.id}}">{{town.name}}</option>
             </select><br>
 
             <p>
-                <a ng-click="" class="button">Update</a>
-                <a href="#/user/ads" class="button">Cancel</a>
+                <a ng-click="editProfile(userData)" class="button">Update</a>
+                <a href="#/" class="button">Cancel</a>
             </p>
         </div>
     </div>
@@ -44,5 +44,4 @@
             </p>
         </div>
     </div>
-
 </div>
