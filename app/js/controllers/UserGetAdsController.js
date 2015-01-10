@@ -20,32 +20,40 @@ app.controller('UserGetAdsController',
             );
         };
 
+
         $scope.deactivateButtonClicked = function (ad) {
             userService.deactivateAd(
                 ad.id,
                 function success () {
                     notifyService.showInfo('Deactivated successful!');
-                    // $location.path('/user/ads');
                 }, function error (err) {
                     notifyService.showError('Deactivated failed: ' + err.message);
                 }
             );
         };
 
-        $scope.activateAgainButtonClicked = function (ad) {
+        $scope.publishAgainButtonClicked = function (ad) {
             userService.publishAgainAd(
                 ad.id,
                 function success () {
                     notifyService.showInfo('Activated successful!');
-                    // $location.path('/user/ads');
                 }, function error (err) {
                     notifyService.showError('Activated failed: ' + err.message);
                 }
             );
         };
 
-
-
+        $scope.deleteAdButtonClicked = function (id) {
+            userService.deleteAd(
+                id,
+                function success (data) {
+                    $rootScope.deletedAd = data;
+                }, function error (error) {
+                    notifyService.showError('Error: fail deleting ad.');
+                }
+            );
+        };
 
         $scope.loadUserAds();
+
     });

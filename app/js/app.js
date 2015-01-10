@@ -28,6 +28,21 @@ app.config(function ($routeProvider) {
         controller: 'UserGetAdsController'
     });
 
+    $routeProvider.when('/user/ads/deactivate/:id', {
+        templateUrl: 'templates/user/get-ads.html',
+        controller: 'UserGetAdsController'
+    });
+
+    $routeProvider.when('/user/ads/publishAgain/:id', {
+        templateUrl: 'templates/user/get-ads.html',
+        controller: 'UserGetAdsController'
+    });
+
+//    $routeProvider.when('/user/ads/delete/:id', {
+//        templateUrl: 'templates/user/confirm-delete.html',
+//        controller: 'DeleteAdController'
+//    });
+
     $routeProvider.when('/user/ads/publish', {
         templateUrl: 'templates/user/publish-new-ad.html',
         controller: 'UserPublishNewAdController'
@@ -37,6 +52,8 @@ app.config(function ($routeProvider) {
         templateUrl: 'templates/user/edit-profile.html',
         controller: 'UserProfileController'
     });
+
+
 
     $routeProvider.otherwise(
         { redirectTo: '/' }
