@@ -194,6 +194,7 @@ ul.sidebar-menu li a, ul.sidebar-menu li a:focus {
     padding-top: 15px;
     padding-bottom: 15px;
     margin-bottom: 15px;
+    width: 180px;
 }
 
 .text-field {
