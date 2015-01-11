@@ -1,6 +1,6 @@
 <ul class="ads">
     <li class="box">
-        <h1 class="text-center">Confirm Deleting Ad?</h1><br>
+        <h1 class="text-center text-field">Confirm Deleting Ad?</h1><br>
         <h1 class="pull-left">{{ad.title}}</h1>
         <div class="pull-right">Date:{{ad.date | date:'dd-MMM-yyyy'}}</div><br><br>
         <div class="row">
@@ -21,7 +21,7 @@
                 </div>
 
                 <div class="edButton">
-                    <a href="#/user/ads/delete/{{ad.id}}" ng-click="deleteAdButtonClicked(ad.id)"
+                    <a href="#/user/ads" ng-click="deleteAdButtonClicked(ad.id)"
                        class="button">Delete</a>
                     <a href="#/ads" class="button">Cancel</a>
                 </div>

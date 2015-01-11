@@ -25,7 +25,7 @@
                         <a href="#/user/ads/{{ad.id}}" ng-click="" class="button">Edit</a>
                         <a href="#/user/ads/publishAgain/{{ad.id}}" ng-click="publishAgainButtonClicked(ad)"
                            class="button">Publish Again</a>
-                        <a href="#/user/ads/delete/{{ad.id}}" ng-click="deleteAdButtonClicked(ad.id)"
+                        <a href="#/user/ads/delete/{{ad.id}}" ng-click="deleteToConfirmAdButtonClicked(ad.id)"
                            class="button">Delete</a>
                     </div>
                     <div ng-if="ad.status == 'WaitingApproval' || ad.status == 'Published'">

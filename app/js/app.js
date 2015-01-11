@@ -45,7 +45,7 @@ app.config(function ($routeProvider) {
 
     $routeProvider.when('/user/ads/delete/:id', {
         templateUrl: 'templates/user/delete-ads.html',
-        controller: 'UserDeleteAdController'
+        controller: 'UserGetAdsController'
     });
 
     $routeProvider.when('/user/profile', {
