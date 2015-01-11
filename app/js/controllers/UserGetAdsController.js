@@ -20,12 +20,12 @@ app.controller('UserGetAdsController',
             );
         };
 
-
         $scope.deactivateButtonClicked = function (ad) {
             userService.deactivateAd(
                 ad.id,
                 function success () {
                     notifyService.showInfo('Deactivated successful!');
+                    //ad.status='Inactive';
                 }, function error (err) {
                     notifyService.showError('Deactivated failed: ' + err.message);
                 }
@@ -37,6 +37,7 @@ app.controller('UserGetAdsController',
                 ad.id,
                 function success () {
                     notifyService.showInfo('Activated successful!');
+                    //ad.status='WaitingApproval';
                 }, function error (err) {
                     notifyService.showError('Activated failed: ' + err.message);
                 }
@@ -44,15 +45,17 @@ app.controller('UserGetAdsController',
         };
 
         $scope.deleteAdButtonClicked = function (id) {
-            userService.deleteAd(
+            userService.getUserAdById(
                 id,
                 function success (data) {
-                    $rootScope.deletedAd = data;
-                }, function error (error) {
-                    notifyService.showError('Error: fail deleting ad.');
+                    alert("Success");
+                    $rootScope.ad=data;
+                }, function error (err) {
+                    notifyService.showError('Cannot get user ad ' + err);
                 }
             );
         };
+
 
         $scope.loadUserAds();
 

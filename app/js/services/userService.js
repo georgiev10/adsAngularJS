@@ -44,6 +44,15 @@ app.factory('userService',
                 $http(request).success(success).error(error);
             },
 
+            getUserAdById: function (id, success, error) {
+                var request = {
+                    method: 'GET',
+                    url: baseServiceUrl + '/api/user/ads/' + id,
+                    headers: authService.getAuthHeaders()
+                };
+                $http(request).success(success).error(error);
+            },
+
             createNewAd: function (adData, success, error) {
                 var request = {
                     method: 'POST',

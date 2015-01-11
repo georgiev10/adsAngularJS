@@ -22,7 +22,7 @@
                 <p class="status">Status: {{ad.status}}</p>
                 <div class="edButton">
                     <div ng-if="ad.status == 'Inactive'">
-                        <a href="#/user/ads/{{ad.id}}" ng-click="editButtonClicked(ad.id)" class="button">Edit</a>
+                        <a href="#/user/ads/{{ad.id}}" ng-click="" class="button">Edit</a>
                         <a href="#/user/ads/publishAgain/{{ad.id}}" ng-click="publishAgainButtonClicked(ad)"
                            class="button">Publish Again</a>
                         <a href="#/user/ads/delete/{{ad.id}}" ng-click="deleteAdButtonClicked(ad.id)"
@@ -33,7 +33,6 @@
                            class="button">Deactivate</a>
                     </div>
                 </div>
-
             </div>
         </div>
     </li>

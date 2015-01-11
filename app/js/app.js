@@ -23,6 +23,11 @@ app.config(function ($routeProvider) {
         controller: 'RegisterController'
     });
 
+    $routeProvider.when('/user/ads/publish', {
+        templateUrl: 'templates/user/publish-new-ad.html',
+        controller: 'UserPublishNewAdController'
+    });
+
     $routeProvider.when('/user/ads', {
         templateUrl: 'templates/user/get-ads.html',
         controller: 'UserGetAdsController'
@@ -38,14 +43,9 @@ app.config(function ($routeProvider) {
         controller: 'UserGetAdsController'
     });
 
-//    $routeProvider.when('/user/ads/delete/:id', {
-//        templateUrl: 'templates/user/confirm-delete.html',
-//        controller: 'DeleteAdController'
-//    });
-
-    $routeProvider.when('/user/ads/publish', {
-        templateUrl: 'templates/user/publish-new-ad.html',
-        controller: 'UserPublishNewAdController'
+    $routeProvider.when('/user/ads/delete/:id', {
+        templateUrl: 'templates/user/delete-ads.html',
+        controller: 'UserDeleteAdController'
     });
 
     $routeProvider.when('/user/profile', {
