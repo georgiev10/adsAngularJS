@@ -60,7 +60,6 @@ app.controller('UserGetAdsController',
                 id,
                 function success () {
                     notifyService.showInfo('Deleted Ad successful!');
-                    $location.path('/user/ads');
                 }, function error (err) {
                     notifyService.showError('Deleted Ad failed ' + err.message);
                 }
